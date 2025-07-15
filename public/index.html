@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>AI Image Lab</title>
+  <title>Image Generator</title>
   <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
   <style>
     html, body {
@@ -13,7 +13,7 @@
       font-family: 'Share Tech Mono', monospace;
       background: black;
       color: #00ffee;
-      overflow: hidden;
+      overflow-x: hidden;
     }
 
     #stars {
@@ -130,9 +130,13 @@
     }
 
     .output img {
+      width: 100%;
+      height: auto;
       max-width: 100%;
+      max-height: 600px;
       border-radius: 12px;
       box-shadow: 0 0 25px #00ffeeaa;
+      margin-top: 10px;
       transition: transform 0.4s;
     }
 
@@ -163,7 +167,7 @@
   <div class="scanlines"></div>
 
   <div class="container">
-    <h1>🧠 AI Image Lab</h1>
+    <h1>ɪᴍᴀɢᴇ ɢᴇɴᴇʀᴀᴛᴏʀ</h1>
     <input type="text" id="prompt" placeholder="Enter your imagination e.g. neon dragon flying over Tokyo">
     <br>
     <button onclick="generateImage()">🧬 Generate</button>
@@ -172,7 +176,7 @@
     <div class="error" id="error"></div>
   </div>
 
-  <footer> Created by Vern | Powered by Urangkapolka Api</footer>
+  <footer>Created by Vern | Powered by Urangkapolka Api</footer>
 
   <script>
     async function generateImage() {
